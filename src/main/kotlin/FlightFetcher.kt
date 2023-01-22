@@ -1,8 +1,7 @@
 import io.ktor.client.*
 import io.ktor.client.engine.cio.*
 import io.ktor.client.request.get
-import kotlinx.coroutines.launch
-import kotlinx.coroutines.runBlocking
+import kotlinx.coroutines.*
 
 
 private const val BASE_URL = "http://kotlin-book.bignerdranch.com/2e"
@@ -22,23 +21,28 @@ fun main() {
     }
 }
 
-suspend fun fetchFlight(passengerName: String): FlightStatus {
+suspend fun fetchFlight(passengerName: String): FlightStatus = coroutineScope {
     val client = HttpClient(CIO)
 
-    println("Started fetching flight info")
-    val flightResponse = client.get<String>(FLIGHT_ENDPOINT).also {
-        println("Finished fetching flight info")
+    val flightResponse = async {
+        println("Started fetching flight info")
+        client.get<String>(FLIGHT_ENDPOINT).also {
+            println("Finished fetching flight info")
+        }
     }
 
-    println("Started fetching loyalty info")
-    val loyaltyResponse = client.get<String>(LOYALTY_ENDPOINT).also {
-        println("Finished fetching loyalty info")
+    val loyaltyResponse = async {
+        println("Started fetching loyalty info")
+        client.get<String>(LOYALTY_ENDPOINT).also {
+            println("Finished fetching loyalty info")
+        }
     }
 
+    delay(500)
     println("Combining flight data")
-    return FlightStatus.parse(
+    FlightStatus.parse(
         passengerName = passengerName,
-        flightResponse = flightResponse,
-        loyaltyResponse = loyaltyResponse
+        flightResponse = flightResponse.await(),
+        loyaltyResponse = loyaltyResponse.await()
     )
 }

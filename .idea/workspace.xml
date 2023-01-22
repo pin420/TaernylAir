@@ -4,9 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="6cb7c848-3fef-4815-bd96-ddbaab705ca0" name="Changes" comment="Использование контекста сопрограммы withContext(Dispatchers.IO)">
+    <list default="true" id="6cb7c848-3fef-4815-bd96-ddbaab705ca0" name="Changes" comment="Парсинг данных рейса">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/build.gradle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/FlightFetcher.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/FlightFetcher.kt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -22,6 +22,7 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Kotlin File" />
+        <option value="Kotlin Data Class" />
       </list>
     </option>
   </component>
@@ -101,7 +102,28 @@
       <option name="project" value="LOCAL" />
       <updated>1674407951638</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="Добавление зависимости Ktor">
+      <created>1674409335138</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1674409335138</updated>
+    </task>
+    <task id="LOCAL-00009" summary="Переход на HttpClient">
+      <created>1674410024879</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1674410024879</updated>
+    </task>
+    <task id="LOCAL-00010" summary="Парсинг данных рейса">
+      <created>1674411550406</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1674411550406</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -122,6 +144,9 @@
     <MESSAGE value="Строитель сопрограмм launch" />
     <MESSAGE value="Использование блокирующего строителя сопрограмм runBlocking" />
     <MESSAGE value="Использование контекста сопрограммы withContext(Dispatchers.IO)" />
-    <option name="LAST_COMMIT_MESSAGE" value="Использование контекста сопрограммы withContext(Dispatchers.IO)" />
+    <MESSAGE value="Добавление зависимости Ktor" />
+    <MESSAGE value="Переход на HttpClient" />
+    <MESSAGE value="Парсинг данных рейса" />
+    <option name="LAST_COMMIT_MESSAGE" value="Парсинг данных рейса" />
   </component>
 </project>
