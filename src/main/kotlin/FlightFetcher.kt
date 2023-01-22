@@ -1,5 +1,7 @@
+import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
 import kotlinx.coroutines.runBlocking
+import kotlinx.coroutines.withContext
 import java.net.URL
 
 
@@ -19,4 +21,6 @@ fun main() {
     }
 }
 
-fun fetchFlight(): String = URL(FLIGHT_ENDPOINT).readText()
+suspend fun fetchFlight(): String = withContext(Dispatchers.IO) {
+    URL(FLIGHT_ENDPOINT).readText()
+}
