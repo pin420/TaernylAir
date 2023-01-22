@@ -4,8 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="6cb7c848-3fef-4815-bd96-ddbaab705ca0" name="Changes" comment="Использование блокирующего строителя сопрограмм runBlocking">
+    <list default="true" id="6cb7c848-3fef-4815-bd96-ddbaab705ca0" name="Changes" comment="Использование контекста сопрограммы withContext(Dispatchers.IO)">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/build.gradle" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -36,12 +37,12 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
@@ -93,7 +94,14 @@
       <option name="project" value="LOCAL" />
       <updated>1674363780646</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="Использование контекста сопрограммы withContext(Dispatchers.IO)">
+      <created>1674407951638</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1674407951638</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -113,6 +121,7 @@
     <MESSAGE value="Включение сопрограмм" />
     <MESSAGE value="Строитель сопрограмм launch" />
     <MESSAGE value="Использование блокирующего строителя сопрограмм runBlocking" />
-    <option name="LAST_COMMIT_MESSAGE" value="Использование блокирующего строителя сопрограмм runBlocking" />
+    <MESSAGE value="Использование контекста сопрограммы withContext(Dispatchers.IO)" />
+    <option name="LAST_COMMIT_MESSAGE" value="Использование контекста сопрограммы withContext(Dispatchers.IO)" />
   </component>
 </project>
