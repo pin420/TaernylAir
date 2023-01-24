@@ -4,9 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="6cb7c848-3fef-4815-bd96-ddbaab705ca0" name="Changes" comment="Использование async и await для параллельного выполнения">
-      <change afterPath="$PROJECT_DIR$/src/main/kotlin/FlightWatcher.kt" afterDir="false" />
+    <list default="true" id="6cb7c848-3fef-4815-bd96-ddbaab705ca0" name="Changes" comment="Создание потоков данных">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/FlightStatus.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/FlightStatus.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/FlightWatcher.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/FlightWatcher.kt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -130,7 +131,21 @@
       <option name="project" value="LOCAL" />
       <updated>1674423310881</updated>
     </task>
-    <option name="localTasksCounter" value="12" />
+    <task id="LOCAL-00012" summary="Создание потоков данных">
+      <created>1674516281471</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1674516281471</updated>
+    </task>
+    <task id="LOCAL-00013" summary="Создание потоков данных">
+      <created>1674516403008</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1674516403008</updated>
+    </task>
+    <option name="localTasksCounter" value="14" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -155,6 +170,7 @@
     <MESSAGE value="Переход на HttpClient" />
     <MESSAGE value="Парсинг данных рейса" />
     <MESSAGE value="Использование async и await для параллельного выполнения" />
-    <option name="LAST_COMMIT_MESSAGE" value="Использование async и await для параллельного выполнения" />
+    <MESSAGE value="Создание потоков данных" />
+    <option name="LAST_COMMIT_MESSAGE" value="Создание потоков данных" />
   </component>
 </project>
