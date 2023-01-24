@@ -4,6 +4,8 @@ import kotlinx.coroutines.flow.collect
 import kotlinx.coroutines.flow.flow
 import kotlinx.coroutines.runBlocking
 import BoardingState.*
+import kotlinx.coroutines.flow.MutableStateFlow
+import kotlinx.coroutines.launch
 
 
 fun main() {
@@ -14,8 +16,19 @@ fun main() {
             "${it.passengerName} (${it.flightNumber})"
         }
         println("Found flights for $flightDescriptions")
-        flights.forEach {
-            watchFlight(it)
+        val flightAtGate = MutableStateFlow(flights.size)
+        launch {
+            flightAtGate.collect { flightCount ->
+                println("There are $flightCount flights being tracked")
+            }
+            println("Finished tracking all flights")
+        }
+
+        launch {
+            flights.forEach {
+                watchFlight(it)
+                flightAtGate.value = flightAtGate.value - 1
+            }
         }
     }
 }
@@ -28,7 +41,7 @@ suspend fun watchFlight(initialFlight: FlightStatus) {
 
         while (flight.departureTimeInMinutes >= 0 && !flight.isFilghtCanced) {
             emit(flight)
-            delay(1000)
+            delay(100)
             flight = flight.copy(
                 departureTimeInMinutes = flight.departureTimeInMinutes - 1
             )
