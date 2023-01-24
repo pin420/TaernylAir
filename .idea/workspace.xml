@@ -4,9 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="6cb7c848-3fef-4815-bd96-ddbaab705ca0" name="Changes" comment="Преобразование потоков данных&#10;Обработка ошибок в потоках данных use catch">
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/FlightWatcher.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/FlightWatcher.kt" afterDir="false" />
-    </list>
+    <list default="true" id="6cb7c848-3fef-4815-bd96-ddbaab705ca0" name="Changes" comment="Преобразование потоков данных" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -192,7 +190,21 @@
       <option name="project" value="LOCAL" />
       <updated>1674530453207</updated>
     </task>
-    <option name="localTasksCounter" value="21" />
+    <task id="LOCAL-00021" summary="Преобразование потоков данных">
+      <created>1674531179694</created>
+      <option name="number" value="00021" />
+      <option name="presentableId" value="LOCAL-00021" />
+      <option name="project" value="LOCAL" />
+      <updated>1674531179694</updated>
+    </task>
+    <task id="LOCAL-00022" summary="Преобразование потоков данных">
+      <created>1674531219159</created>
+      <option name="number" value="00022" />
+      <option name="presentableId" value="LOCAL-00022" />
+      <option name="project" value="LOCAL" />
+      <updated>1674531219159</updated>
+    </task>
+    <option name="localTasksCounter" value="23" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -222,8 +234,8 @@
     <MESSAGE value="MutableStateFlow" />
     <MESSAGE value="Завершение потоков данных" />
     <MESSAGE value="Обработка ошибок в потоках данных, use catch" />
-    <MESSAGE value="Преобразование потоков данных" />
     <MESSAGE value="Преобразование потоков данных&#10;Обработка ошибок в потоках данных use catch" />
-    <option name="LAST_COMMIT_MESSAGE" value="Преобразование потоков данных&#10;Обработка ошибок в потоках данных use catch" />
+    <MESSAGE value="Преобразование потоков данных" />
+    <option name="LAST_COMMIT_MESSAGE" value="Преобразование потоков данных" />
   </component>
 </project>
