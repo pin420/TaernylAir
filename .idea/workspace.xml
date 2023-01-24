@@ -4,7 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="6cb7c848-3fef-4815-bd96-ddbaab705ca0" name="Changes" comment="MutableStateFlow" />
+    <list default="true" id="6cb7c848-3fef-4815-bd96-ddbaab705ca0" name="Changes" comment="Преобразование потоков данных&#10;Обработка ошибок в потоках данных use catch">
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/FlightWatcher.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/FlightWatcher.kt" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -155,7 +157,42 @@
       <option name="project" value="LOCAL" />
       <updated>1674528326849</updated>
     </task>
-    <option name="localTasksCounter" value="16" />
+    <task id="LOCAL-00016" summary="Завершение потоков данных">
+      <created>1674528964355</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1674528964355</updated>
+    </task>
+    <task id="LOCAL-00017" summary="Преобразование потоков данных">
+      <created>1674529294919</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1674529294919</updated>
+    </task>
+    <task id="LOCAL-00018" summary="Преобразование потоков данных">
+      <created>1674529324229</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1674529324229</updated>
+    </task>
+    <task id="LOCAL-00019" summary="Преобразование потоков данных">
+      <created>1674530354722</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1674530354722</updated>
+    </task>
+    <task id="LOCAL-00020" summary="Преобразование потоков данных&#10;Обработка ошибок в потоках данных use catch">
+      <created>1674530453207</created>
+      <option name="number" value="00020" />
+      <option name="presentableId" value="LOCAL-00020" />
+      <option name="project" value="LOCAL" />
+      <updated>1674530453207</updated>
+    </task>
+    <option name="localTasksCounter" value="21" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -183,6 +220,10 @@
     <MESSAGE value="Создание потоков данных" />
     <MESSAGE value="Улучшение вывода" />
     <MESSAGE value="MutableStateFlow" />
-    <option name="LAST_COMMIT_MESSAGE" value="MutableStateFlow" />
+    <MESSAGE value="Завершение потоков данных" />
+    <MESSAGE value="Обработка ошибок в потоках данных, use catch" />
+    <MESSAGE value="Преобразование потоков данных" />
+    <MESSAGE value="Преобразование потоков данных&#10;Обработка ошибок в потоках данных use catch" />
+    <option name="LAST_COMMIT_MESSAGE" value="Преобразование потоков данных&#10;Обработка ошибок в потоках данных use catch" />
   </component>
 </project>

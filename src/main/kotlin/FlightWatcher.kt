@@ -50,19 +50,20 @@ suspend fun watchFlight(initialFlight: FlightStatus) {
     }
 
     currentFlight
+        .map { flight ->
+            when (flight.boardingStatus) {
+                FilghtCanceled -> "Your flight was canceld"
+                BoardingNotStarted -> "Boarding will start soon"
+                WaitingToBoard -> "Other passengers are boarding"
+                Boarding -> "You can now board the plane"
+                BoardingEnded -> "The boarding doors have closed"
+            } + " (FLight departs in ${flight.departureTimeInMinutes} minutes)"
+        }
         .onCompletion {
             println("Finished tracking $passengerName's flight")
         }
-        .collect {
-        val status = when (it.boardingStatus) {
-            FilghtCanceled -> "Your flight was canceld"
-            BoardingNotStarted -> "Boarding will start soon"
-            WaitingToBoard -> "Other passengers are boarding"
-            Boarding -> "You can now board the plane"
-            BoardingEnded -> "The boarding doors have closed"
-        } + " (FLight departs in ${it.departureTimeInMinutes} minutes)"
-
-        println("$passengerName: $status")
+        .collect { status ->
+            println("$passengerName: $status")
     }
 }
 
