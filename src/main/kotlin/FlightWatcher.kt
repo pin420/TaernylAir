@@ -1,10 +1,7 @@
 import kotlinx.coroutines.delay
-import kotlinx.coroutines.flow.Flow
-import kotlinx.coroutines.flow.collect
-import kotlinx.coroutines.flow.flow
 import kotlinx.coroutines.runBlocking
 import BoardingState.*
-import kotlinx.coroutines.flow.MutableStateFlow
+import kotlinx.coroutines.flow.*
 import kotlinx.coroutines.launch
 
 
@@ -18,10 +15,14 @@ fun main() {
         println("Found flights for $flightDescriptions")
         val flightAtGate = MutableStateFlow(flights.size)
         launch {
-            flightAtGate.collect { flightCount ->
+            flightAtGate
+                .takeWhile { it > 0 }
+                .onCompletion {
+                    println("Finished tracking all flights")
+                }
+                .collect { flightCount ->
                 println("There are $flightCount flights being tracked")
             }
-            println("Finished tracking all flights")
         }
 
         launch {
@@ -48,7 +49,11 @@ suspend fun watchFlight(initialFlight: FlightStatus) {
         }
     }
 
-    currentFlight.collect {
+    currentFlight
+        .onCompletion {
+            println("Finished tracking $passengerName's flight")
+        }
+        .collect {
         val status = when (it.boardingStatus) {
             FilghtCanceled -> "Your flight was canceld"
             BoardingNotStarted -> "Boarding will start soon"
@@ -59,8 +64,6 @@ suspend fun watchFlight(initialFlight: FlightStatus) {
 
         println("$passengerName: $status")
     }
-
-    println("Finished tracking $passengerName's flight")
 }
 
 suspend fun fetchFlights(passengerNames: List<String> = listOf("Madrigal", "Polarcubis")) =
