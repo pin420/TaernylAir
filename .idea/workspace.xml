@@ -4,7 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="6cb7c848-3fef-4815-bd96-ddbaab705ca0" name="Changes" comment="Получение всех значений из канала" />
+    <list default="true" id="6cb7c848-3fef-4815-bd96-ddbaab705ca0" name="Changes" comment="Отправка между двумя каналами">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -232,7 +234,14 @@
       <option name="project" value="LOCAL" />
       <updated>1674626596547</updated>
     </task>
-    <option name="localTasksCounter" value="27" />
+    <task id="LOCAL-00027" summary="Отправка между двумя каналами">
+      <created>1674627270607</created>
+      <option name="number" value="00027" />
+      <option name="presentableId" value="LOCAL-00027" />
+      <option name="project" value="LOCAL" />
+      <updated>1674627270607</updated>
+    </task>
+    <option name="localTasksCounter" value="28" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -268,14 +277,15 @@
     <MESSAGE value="Отправка данных в канал" />
     <MESSAGE value="Получение данных из канала" />
     <MESSAGE value="Получение всех значений из канала" />
-    <option name="LAST_COMMIT_MESSAGE" value="Получение всех значений из канала" />
+    <MESSAGE value="Отправка между двумя каналами" />
+    <option name="LAST_COMMIT_MESSAGE" value="Отправка между двумя каналами" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" type="kotlin-function">
           <url>file://$PROJECT_DIR$/src/main/kotlin/FlightWatcher.kt</url>
-          <line>84</line>
+          <line>87</line>
           <properties method="fetchFlights">
             <option name="EMULATED" value="true" />
             <option name="WATCH_EXIT" value="false" />

@@ -94,10 +94,12 @@ suspend fun fetchFlights(passengerNames: List<String> = listOf("Madrigal", "Pola
             passengerNames.forEach {
                 passengerNamesChannel.send(it)
             }
+            passengerNamesChannel.close()
         }
 
         launch {
             fetchFlightStatuses(passengerNamesChannel, fetchedFlightsChannel)
+            fetchedFlightsChannel.close()
         }
 
         fetchedFlightsChannel.toList()
