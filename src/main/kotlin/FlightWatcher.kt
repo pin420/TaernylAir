@@ -1,6 +1,8 @@
 import kotlinx.coroutines.delay
 import kotlinx.coroutines.runBlocking
 import BoardingState.*
+import kotlinx.coroutines.channels.Channel
+import kotlinx.coroutines.coroutineScope
 import kotlinx.coroutines.flow.*
 import kotlinx.coroutines.launch
 
@@ -80,5 +82,14 @@ suspend fun watchFlight(initialFlight: FlightStatus) {
     }
 }
 
-suspend fun fetchFlights(passengerNames: List<String> = listOf("Madrigal", "Polarcubis")) =
-    passengerNames.map { fetchFlight(it) }
+suspend fun fetchFlights(passengerNames: List<String> = listOf("Madrigal", "Polarcubis")): List<FlightStatus> =
+    coroutineScope {
+        val passengerNamesChannel = Channel<String>()
+        launch {
+            passengerNames.forEach {
+                passengerNamesChannel.send(it)
+            }
+        }
+
+        emptyList()
+    }
