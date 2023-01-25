@@ -2,6 +2,9 @@ import kotlinx.coroutines.delay
 import kotlinx.coroutines.runBlocking
 import BoardingState.*
 import kotlinx.coroutines.channels.Channel
+import kotlinx.coroutines.channels.ReceiveChannel
+import kotlinx.coroutines.channels.SendChannel
+import kotlinx.coroutines.channels.toList
 import kotlinx.coroutines.coroutineScope
 import kotlinx.coroutines.flow.*
 import kotlinx.coroutines.launch
@@ -85,6 +88,8 @@ suspend fun watchFlight(initialFlight: FlightStatus) {
 suspend fun fetchFlights(passengerNames: List<String> = listOf("Madrigal", "Polarcubis")): List<FlightStatus> =
     coroutineScope {
         val passengerNamesChannel = Channel<String>()
+        val fetchedFlightsChannel = Channel<FlightStatus>()
+
         launch {
             passengerNames.forEach {
                 passengerNamesChannel.send(it)
@@ -92,18 +97,20 @@ suspend fun fetchFlights(passengerNames: List<String> = listOf("Madrigal", "Pola
         }
 
         launch {
-            fetchFlightStatuses(passengerNamesChannel)
+            fetchFlightStatuses(passengerNamesChannel, fetchedFlightsChannel)
         }
 
-        emptyList()
+        fetchedFlightsChannel.toList()
     }
 
 
 suspend fun fetchFlightStatuses(
-    fetchChannel: Channel<String>
+    fetchChannel: ReceiveChannel<String>,
+    resultChannel: SendChannel<FlightStatus>
 ) {
     for (passengerName in fetchChannel) {
         val flight = fetchFlight(passengerName)
         println("Fetched flight: $flight")
+        resultChannel.send(flight)
     }
 }

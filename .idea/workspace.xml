@@ -4,7 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="6cb7c848-3fef-4815-bd96-ddbaab705ca0" name="Changes" comment="Обработка ошибок в потоках данных try-catch or .catch" />
+    <list default="true" id="6cb7c848-3fef-4815-bd96-ddbaab705ca0" name="Changes" comment="Получение всех значений из канала" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -211,7 +211,28 @@
       <option name="project" value="LOCAL" />
       <updated>1674531574988</updated>
     </task>
-    <option name="localTasksCounter" value="24" />
+    <task id="LOCAL-00024" summary="Отправка данных в канал">
+      <created>1674625504740</created>
+      <option name="number" value="00024" />
+      <option name="presentableId" value="LOCAL-00024" />
+      <option name="project" value="LOCAL" />
+      <updated>1674625504740</updated>
+    </task>
+    <task id="LOCAL-00025" summary="Получение данных из канала">
+      <created>1674626232272</created>
+      <option name="number" value="00025" />
+      <option name="presentableId" value="LOCAL-00025" />
+      <option name="project" value="LOCAL" />
+      <updated>1674626232272</updated>
+    </task>
+    <task id="LOCAL-00026" summary="Получение всех значений из канала">
+      <created>1674626596547</created>
+      <option name="number" value="00026" />
+      <option name="presentableId" value="LOCAL-00026" />
+      <option name="project" value="LOCAL" />
+      <updated>1674626596547</updated>
+    </task>
+    <option name="localTasksCounter" value="27" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -244,6 +265,24 @@
     <MESSAGE value="Преобразование потоков данных&#10;Обработка ошибок в потоках данных use catch" />
     <MESSAGE value="Преобразование потоков данных" />
     <MESSAGE value="Обработка ошибок в потоках данных try-catch or .catch" />
-    <option name="LAST_COMMIT_MESSAGE" value="Обработка ошибок в потоках данных try-catch or .catch" />
+    <MESSAGE value="Отправка данных в канал" />
+    <MESSAGE value="Получение данных из канала" />
+    <MESSAGE value="Получение всех значений из канала" />
+    <option name="LAST_COMMIT_MESSAGE" value="Получение всех значений из канала" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="kotlin-function">
+          <url>file://$PROJECT_DIR$/src/main/kotlin/FlightWatcher.kt</url>
+          <line>84</line>
+          <properties method="fetchFlights">
+            <option name="EMULATED" value="true" />
+            <option name="WATCH_EXIT" value="false" />
+          </properties>
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>
