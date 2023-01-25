@@ -102,7 +102,8 @@ suspend fun fetchFlights(passengerNames: List<String> = listOf("Madrigal", "Pola
 suspend fun fetchFlightStatuses(
     fetchChannel: Channel<String>
 ) {
-    val passengerName = fetchChannel.receive()
-    val flight = fetchFlight(passengerName)
-    println("Fetched flight: $flight")
+    for (passengerName in fetchChannel) {
+        val flight = fetchFlight(passengerName)
+        println("Fetched flight: $flight")
+    }
 }
